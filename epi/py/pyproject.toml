@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "epi-py"
+version = "0.1.0"
+description = "Elements of Programming Interview problems"
+authors = ["quadjump <krypton-00fallout@icloud.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^1.9.1"
+more-itertools = "^8.13.0"
+# mypy = "^0.961"
+# pylint = "^2.14.3"
+# black = "^22.3.0"
+# pytest = "^7.1.2"
+# flake8 = "^4.0.1"
+# isort = "^5.10.1"
+# pre-commit = "^2.19.0"
+textual = "^0.1.18"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.961"
+pytest = "^7.0.1"
+flake8 = "^4.0.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+pre-commit = "^2.19.0"
+tryceratops = "^1.1.0"
+doc2dash = "^2.4.1"
+pydocstyle = "^6.1.1"
+Sphinx = "^5.0.2"
+sphinx-rtd-theme = "^1.0.0"
+sphinx-autobuild = "^2021.3.14"
+
+[tool.poetry.extras]
+docs = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-napoleon"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
