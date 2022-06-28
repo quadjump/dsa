@@ -1,9 +1,9 @@
-.. epi-py documentation master file, created by
+.. epi_py documentation master file, created by
    sphinx-quickstart on Mon Jun 27 12:25:18 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to epi-py's documentation!
+Welcome to epi_py's documentation!
 ==================================
 
 .. toctree::

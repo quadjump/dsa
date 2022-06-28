@@ -12,12 +12,12 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'epi-py'
+project = 'epi_py'
 copyright = '2022, quadjump'
 author = 'quadjump'
 

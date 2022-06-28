@@ -1,8 +1,9 @@
 [tool.poetry]
-name = "epi-py"
+name = "epi_py"
 version = "0.1.0"
 description = "Elements of Programming Interview problems"
 authors = ["quadjump <krypton-00fallout@icloud.com>"]
+packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
