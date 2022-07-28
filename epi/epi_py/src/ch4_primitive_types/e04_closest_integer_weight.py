@@ -42,6 +42,8 @@ def closest_same_weight_integer(word: int) -> int:
     word_: int = word
 
     def bit_pos(word: int) -> int:
+        if word == 0:
+            return 0
         return int(math.log2(word))
 
     while word_ != 0:
