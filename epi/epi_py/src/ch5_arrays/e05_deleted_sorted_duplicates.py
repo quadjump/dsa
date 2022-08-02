@@ -32,7 +32,7 @@ def dedup_sorted(xs: List[int], prev: Optional[int]=None) -> List[int]:
                 return dedup_sorted(tail, h) + [0]
             else:
                 return [h] + dedup_sorted(tail, h)
-        case _: raise Exception("Impossible bruh")
+        case _, _: raise Exception("Impossible bruh")
 
 
 def dedup_in_place(xs: List[int]) -> List[int]:
@@ -69,6 +69,7 @@ def dedup_in_place(xs: List[int]) -> List[int]:
                     xs[vacancy] = xs[front+1]
                     vacancy = front
                 front += 1
+            return []
                 
 
 
