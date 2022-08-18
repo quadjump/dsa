@@ -5,6 +5,9 @@
   - [Arrays](#arrays)
   - [Strings](#strings)
   - [Linked Lists](#linked-lists)
+  - [Stacks](#stacks)
+    - [Queues](#queues)
+  - [Heaps](#heaps)
 
 ## Primitive Types
 * Bitwise
@@ -16,6 +19,8 @@
     * Ex. `0b11010 - ~(0b11010 - 1) = 0b10 = 2`
 * Integers
   * `sys.maxsize` for max int (not really, just large #)
+
+[Back to Top⤴](notes.md#notes)
 
 ## Arrays
 
@@ -78,6 +83,8 @@
   * > When operating on 2D arrays, use parallel logic for rows and for columns.
   * > Sometimes it's easier to simulate the specification, than to analytically solve for the result. For example, rather than writing a formula for the z-th entry in the spiral order for an n x n matrix, just compute the output from the beginning.
 
+[Back to Top⤴](notes.md#notes)
+
 ## Strings
 
 * Immutable Representation
@@ -92,6 +99,7 @@
   * > Understand the implications of a string type which is immutable, e.g., the need to allocate a new string when concatenating immutable strings. Know alternatives to immutable strings, e.g., a list in Python.
   * > Updating a mutable string from the front is slow, so see if it's possible to write values from the back.
 
+[Back to Top⤴](notes.md#notes)
 
 ## Linked Lists
 
@@ -126,3 +134,82 @@ class DoubleyNode:
   * > Consider using a dummy head (sometimes referred to as a sentinel) to avoid having to check for empty lists. This simplifies code, and makes bugs less likely.
   * > It's easy to forget to update next (and previous for double linked list) for the head and tail.
   * > Algorithms operating on singly linked lists often benefit from using two iterators, one ahead of the other, or one advancing quicker than the other.
+
+[Back to Top⤴](notes.md#notes)
+
+## Stacks
+
+* Stacks vs Queues
+  * Stacks = LIFO (stack on and take from top, ex. stacking and removing boxes)
+  * Queues = FIFO (queueing up element, ex. given bunch of orders, serve oldest first)
+* Stack API
+  * `push`: cons O(1)
+    * In python, lambda x, xs: [x] + xs)
+    * Amortized O(1) for dynamically-resizing array
+  * `pop`: head O(1) (`pop()`)
+  * `peek`: xs[0] (look at head but don't remove) O(1)
+* Via `collections.deque` (when lists aren't enough)
+  * > Generalization of stacks and queues (the name is pronounced “deck” and is short for “double-ended queue”). Deques support thread-safe, memory efficient appends and pops from either side of the deque with approximately the same O(1) performance in either direction.
+  * Methods
+    *  `append` (snoc)
+    * `appendleft` (cons)
+    * `clear`
+    * `count`
+    * `extend`
+    * `index(x, ...)` (search)
+    * `insert(ix, x)`
+    * `pop`
+    * `popleft`
+    * `remove`
+    * `reverse`
+    * `rotate`
+* Via regular lists `[]`
+    * `.append(e)`
+    * `xs[-1]`
+    * `.pop()`
+    * define empty as `len(xs) == None`
+* Via `import queue` 
+  * Queue Types
+    * `Queue(maxsize=0)`
+    * `LifoQueue(maxsize=0)` (AKA a stack)
+    * `PriorityQueue(maxsize=0)`
+    * `SimpleQueue`
+  * Methods
+    * `qsize()` Queue -> int
+    * `empty` Queue -> bool
+    * `full` Queue -> bool
+    * `put(item,...)` Queue[T] -> T -> Queue[T]
+    * `get()` Queue[T] -> T 
+* EPI Tips
+  * > Learn to recognize when the stack LIFO property is applicable. For example, parsing typically benefits from a stack.
+  * > Consider augmenting the basic stack or queue data structure to support additional operations, such as finding the maximum element.
+
+
+[Back to Top⤴](notes.md#notes)
+
+### Queues
+
+* Methods
+  * `.append(e)`
+  * `q[0]` = head
+  * `q[-1]` = last
+  * `q.popleft()` = tail (aka remove head)
+
+
+[Back to Top⤴](notes.md#notes)
+
+## Heaps
+
+[`heapq` in base libray](https://docs.python.org/3/library/heapq.html#module-heapq)
+
+[Back to Top⤴](notes.md#notes)
+
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+[Back to Top⤴](notes.md#notes)
+
