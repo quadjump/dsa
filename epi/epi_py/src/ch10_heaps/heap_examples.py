@@ -54,14 +54,15 @@ def kth_largest(k: int, nums: List[int]) -> int:
 
 def add(val: int) -> int:
     """
-    # >>> [print((add(x), num_stream)) for x in [12,14,1,98,2,104]]
-    # (10, [99, 12, 8, 7, 10, 5, 4, 1, 3, 6, 9])
-    # (12, [99, 14, 12, 7, 10, 8, 4, 1, 3, 6, 9, 5])
-    # (12, [99, 10, 14, 7, 9, 12, 4, 1, 3, 1, 6, 5, 8])
-    # (14, [99, 10, 98, 7, 9, 12, 14, 1, 3, 1, 6, 5, 8, 4])
-    # (14, [99, 10, 98, 7, 9, 8, 14, 1, 3, 1, 6, 2, 5, 4, 12])
-    # (98, [104, 98, 99, 10, 9, 8, 14, 7, 3, 1, 6, 2, 5, 4, 12, 1])
+    # >>> [print(f"k:{kth_pos} kth-largest:{add(x)} heap:{num_stream}") for x in [12,14,1,98,2,104]]; heapq.nlargest(kth_pos, num_stream)
+    # k:3 kth-largest:10 heap:[99, 12, 8, 7, 10, 5, 4, 1, 3, 6, 9]
+    # k:3 kth-largest:12 heap:[99, 14, 12, 7, 10, 8, 4, 1, 3, 6, 9, 5]
+    # k:3 kth-largest:12 heap:[99, 10, 14, 7, 9, 12, 4, 1, 3, 1, 6, 5, 8]
+    # k:3 kth-largest:14 heap:[99, 10, 98, 7, 9, 12, 14, 1, 3, 1, 6, 5, 8, 4]
+    # k:3 kth-largest:14 heap:[99, 10, 98, 7, 9, 8, 14, 1, 3, 1, 6, 2, 5, 4, 12]
+    # k:3 kth-largest:98 heap:[104, 98, 99, 10, 9, 8, 14, 7, 3, 1, 6, 2, 5, 4, 12, 1]
     # [None, None, None, None, None, None]
+    # [104, 99, 98]
     #
     """
     num_stream.append(val)
