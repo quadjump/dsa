@@ -8,6 +8,9 @@
   - [Stacks](#stacks)
     - [Queues](#queues)
   - [Heaps](#heaps)
+  - [Search](#search)
+  - [Hashing](#hashing)
+  - [Sorting](#sorting)
 
 ## Primitive Types
 * Bitwise
@@ -204,8 +207,28 @@ class DoubleyNode:
 
 [Back to Top⤴](notes.md#notes)
 
+## Search
+
 [Back to Top⤴](notes.md#notes)
+
+## Hashing
+
 [Back to Top⤴](notes.md#notes)
+
+## Sorting
+
+* Sorting Methods
+  * `sort(key: Optional[x -> x], reverse: bool)`
+    * in-place sorting
+  * `sorted()`
+    * returns new sorted sequence
+* EPI Tips
+  * Sorting problems come in two flavors: (1.) use sorting to make subsequent steps in an algo­rithm simpler, and (2.) design a custom sorting routine. For the former, it's fine to use a librarysort function, possibly with a custom comparator. For the latter, use a data structure like a BST, heap, or array indexed by values.
+  * Certain problems become easier to understand, as well as solve, when the input is sorted. The most natural reason to sort is if the inputs have a natural ordering, and sorting can be used as a preprocessing step to speed up searching.
+  * For specialized input, e.g., a very small range of values, or a small number of values, it's possible to sort in 0(n) time rather than 0(n log n) time.
+  * It's often the case that sorting can be implemented in less space than required by a brute-force approach.
+  * Sometimes it is not obvious what to sort on, e.g., should a collection of intervals be sorted on starting points or endpoints? (Problem 13.5 on Page 186)
+
 [Back to Top⤴](notes.md#notes)
 [Back to Top⤴](notes.md#notes)
 [Back to Top⤴](notes.md#notes)
